@@ -2,6 +2,10 @@ import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
 import dts from 'vite-plugin-dts'
 import { resolve } from 'path'
+import { fileURLToPath } from 'url'
+import path from 'path'
+
+const __dirname = path.dirname(fileURLToPath(import.meta.url))
 
 export default defineConfig({
   plugins: [
@@ -11,7 +15,17 @@ export default defineConfig({
     dts({
       insertTypesEntry: true,
       cleanVueFileName: true,
-    })
+    }),
+    {
+      name: 'copy-style',
+      closeBundle() {
+        const fs = require('fs')
+        fs.copyFileSync(
+          resolve(__dirname, 'src/style.css'),
+          resolve(__dirname, 'dist/style.css')
+        )
+      }
+    }
   ],
   build: {
     lib: {

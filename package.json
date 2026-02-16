@@ -2,14 +2,14 @@
   "name": "vue-hebrew-date-picker",
   "version": "1.0.0",
   "description": "Beautiful Hebrew/Jewish date picker for Vue 3",
-  "main": "dist/index.js",
-  "module": "dist/index.mjs",
+  "main": "dist/index.umd.js",
+  "module": "dist/index.es.js",
   "types": "dist/index.d.ts",
   "exports": {
     ".": {
-      "import": "./dist/index.mjs",
-      "require": "./dist/index.js",
-      "types": "./dist/index.d.ts"
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.es.js",
+      "require": "./dist/index.umd.js"
     },
     "./dist/style.css": "./dist/style.css"
   },
