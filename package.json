@@ -1,0 +1,49 @@
+{
+  "name": "vue-hebrew-date-picker",
+  "version": "1.0.0",
+  "description": "Beautiful Hebrew/Jewish date picker for Vue 3",
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    },
+    "./dist/style.css": "./dist/style.css"
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "demo:dev": "cd demo && npm run dev"
+  },
+  "keywords": [
+    "vue",
+    "hebrew",
+    "jewish",
+    "date",
+    "picker",
+    "calendar"
+  ],
+  "author": "",
+  "license": "MIT",
+  "peerDependencies": {
+    "vue": "^3.0.0"
+  },
+  "dependencies": {
+    "dayjs": "^1.11.13",
+    "jewish-date": "^2.0.19"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^5.2.1",
+    "typescript": "^5.7.3",
+    "vite": "^6.0.7",
+    "vite-plugin-dts": "^4.5.0",
+    "vue": "^3.5.13"
+  }
+}
